@@ -148,9 +148,12 @@ El foco está exclusivamente en el **núcleo lógico y arquitectónico**.
 - Uso: **núcleo del sistema AscendIA**
 
 Este repositorio se publica como **caso de estudio técnico** y base para discusión arquitectónica.
-Ss
-<br></br>SSS
-Ingeniero de Producto
+
+<br></br>
+
+### Autor
+
+**Marcelo Melogno** | Ingeniero de Producto
 
 Arquitectura server-first · IA gobernable · Sistemas deterministas
 
