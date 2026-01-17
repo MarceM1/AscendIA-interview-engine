@@ -1,0 +1,34 @@
+{
+  "name": "interview",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "interview-engine": "tsx tests/interview-engine.e2e.test.ts",
+    "happy-path": "tsx tests/scenarios/happy-path.test.ts",
+    "insufficient-signals": "tsx tests/scenarios/insufficient-signals.test.ts",
+    "low-confidence": "tsx tests/scenarios/low-confidence.test.ts",
+    "rules-conflict": "tsx tests/scenarios/rules-conflict.test.ts"
+  },
+  "dependencies": {
+    "next": "15.5.9",
+    "react": "^19.1.2",
+    "react-dom": "^19.1.2"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@next/bundle-analyzer": "^16.0.3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/ws": "^8.18.1",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.3",
+    "lighthouse": "^12.8.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5"
+  }
+}
