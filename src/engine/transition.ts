@@ -1,20 +1,14 @@
 import { InterviewPhase } from "@/types/types";
-import { PhaseCondition} from "../phase/phaseCondition";
-import { MinimumSignalsCondition } from "../conditions/MinimumSignalsCondition";
-import {  SignalConfidenceCondition } from "../conditions/SignalConfidenceCondition";
-import { EvaluationCoverageCondition } from "../conditions/EvaluationCoverageCondition";
-import { NoCriticalGapsCondition } from "../conditions/NoCriticalGapCondition";
-import { DecisionReachedCondition } from "../conditions/DecisionReachedCondition";
-import { MaxDecisionTimeExceededCondition } from "../conditions/MaxDecisionTimeExceededCondition";
+import { PhaseCondition } from "../phase/phaseCondition";
 import { DecisionOutcome } from "../types/decisionOutcome";
 import { SessionRuntimeAdapter } from "../types";
 export type RuleMode = "ALL" | "ANY";
 
 export interface PhaseRuleSet {
-    fromPhase: InterviewPhase;
-    toPhase: InterviewPhase;
-    conditions: PhaseCondition[];
-    mode: RuleMode // ALL: all conditions must pass, ANY: at least one must pass
+  fromPhase: InterviewPhase;
+  toPhase: InterviewPhase;
+  conditions: PhaseCondition[];
+  mode: RuleMode;
 }
 
 export const explorationToEvaluationRuleSet: PhaseRuleSet = {
@@ -47,8 +41,6 @@ export const decisionToClosureRuleSet: PhaseRuleSet = {
   ],
 };
 
-
-
 export class DecisionExecutor {
   constructor(private readonly adapter: SessionRuntimeAdapter) {}
 
@@ -68,7 +60,3 @@ export class DecisionExecutor {
     }
   }
 }
-
-
-
-

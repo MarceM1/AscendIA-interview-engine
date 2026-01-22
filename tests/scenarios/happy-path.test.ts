@@ -1,6 +1,5 @@
 import { InterviewEngineState } from "../../src/types/InterviewEngineTypes";
 
-// Mocks and helpers
 const mockSession = {
   sessionId: "session_123",
   interviewId: "interview_456",

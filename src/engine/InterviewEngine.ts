@@ -9,11 +9,8 @@ import { evaluatePhaseRules } from "./decisionRules";
 
 /**
  * InterviewEngine
- *
- * Núcleo determinista del sistema.
- * Consume señales estructuradas y decide transiciones de fase
- * sin depender del modelo de IA.
- */
+*/
+
 export class InterviewEngine {
   decide(
     state: InterviewEngineState,

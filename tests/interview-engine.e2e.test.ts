@@ -11,7 +11,7 @@ const mockSession = {
 };
 
 test("advances from EXPLORATION to EVALUATION when confidence and coverage are sufficient", () => {
-  //1. Configurar el estado inicial
+  // Configurar el estado inicial
   const initialState: InterviewEngineState = {
     phase: "EXPLORATION",
     signals: [{ confidence: 0.7 }],
@@ -25,7 +25,7 @@ test("advances from EXPLORATION to EVALUATION when confidence and coverage are s
     },
   };
 
-  //2. Runtime Manager procesa las señales del agente
+  // Runtime Manager procesa las señales del agente
   const runtime = new InterviewRuntimeManager();
   const runtimeResult = runtime.handle({
     session: mockSession,
@@ -36,12 +36,12 @@ test("advances from EXPLORATION to EVALUATION when confidence and coverage are s
 `,
   });
 
-  //3. Decision Engine evalúa la transición de fase
+  // Decision Engine evalúa la transición de fase
   const decisionEngine = new DecisionEngine();
 
   const outcome = decisionEngine.decide(runtimeResult.nextState, phaseRules);
 
-  //4. Verificar que la fase haya avanzado correctamente
+  // Verificar que la fase haya avanzado correctamente
   expect(outcome).toEqual({
     type: "ADVANCE_PHASE",
     from: "EXPLORATION",
